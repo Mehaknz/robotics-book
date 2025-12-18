@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "bash(*.ps1)",
+      "bash(powershell.exe*)",
+      "bash(pwsh.exe*)",
+      "cmd(*.bat)",
+      "cmd(*.cmd)",
+      "read(*)",
+      "write(**/*.md)",
+      "write(scripts/**)",
+      "write(sp_*/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,146 @@
+# Vision Specification: The Physical AI & Humanoid Robotics Book
+
+---
+
+## 1. Purpose of the Book
+
+This book's primary purpose is to serve as the definitive, hands-on guide for designing, simulating, and deploying intelligent humanoid robots. It systematically bridges the gap between digital AI theory and physical robotic embodiment, equipping readers with the practical skills to build systems that can perceive, reason, and act in the real world.
+
+---
+
+## 2. Target Audience
+
+This book is engineered for three primary archetypes:
+
+### 2.1. University Students
+-   Upper-division undergraduate or graduate students in computer science, robotics, or AI programs who need a structured, project-based curriculum.
+
+### 2.2. Software Engineers & Developers
+-   Professionals transitioning into robotics who possess strong software skills but lack experience in embodied AI and hardware integration.
+
+### 2.3. AI/ML Researchers
+-   Researchers who wish to apply their work in areas like computer vision and natural language processing to physical systems and understand the challenges of sim-to-real transfer.
+
+---
+
+## 3. High-Level Goals
+
+-   **Goal-01 (Mastery through Practice):** Deliver a project-centric learning experience where every theoretical concept is immediately applied in a lab or simulation.
+-   **Goal-02 (Unify Simulation and Reality):** Establish a robust, reproducible workflow for developing and testing in high-fidelity simulators (Gazebo, Isaac Sim) and deploying to physical hardware.
+-   **Goal-03 (Integrate Modern AI):** Teach the integration of cutting-edge Vision-Language-Action (VLA) models and large language models (LLMs) into the robotic control loop for advanced cognitive tasks.
+
+---
+
+## 4. Core Curriculum: What the Book Must Teach
+
+The curriculum is designed to build mastery layer by layer:
+
+-   **Physical AI Fundamentals:** The core principles of embodied intelligence.
+-   **ROS 2:** The complete "nervous system" for modern robotics.
+-   **Gazebo & Unity:** For physics simulation and high-quality Human-Robot Interaction (HRI) visualization.
+-   **NVIDIA Isaac Sim:** For photorealistic simulation, synthetic data generation, and AI-driven perception.
+-   **VSLAM & Navigation:** Techniques for simultaneous localization, mapping, and autonomous path planning.
+-   **VLA & LLM Integration:** Using models like GPT for task planning and VLAs for perception-to-action pipelines.
+-   **Humanoid Robotics:** The specifics of bipedal locomotion, balance, kinematics, and whole-body control.
+
+---
+
+## 5. Long-Term Impact
+
+-   **Skills:** Graduates of this curriculum will be fluent in the entire stack required for modern humanoid robotics, from low-level control to high-level AI cognition.
+-   **Lab Readiness:** Readers will be capable of setting up a complete robotics lab, whether on-premise or in the cloud.
+-   **Research Awareness:** The book will provide a strong foundation for pursuing advanced research in physical AI and HRI.
+
+---
+
+## 6. Success Criteria
+
+The success of this book will be measured by the following outcomes:
+-   **SC-01:** A student can successfully complete the capstone project, demonstrating an autonomous humanoid robot performing a complex task.
+-   **SC-02:** 100% of code examples and simulation labs are fully reproducible on the hardware and software defined in `/sp.architecture`.
+-   **SC-03:** The book is adopted as a primary text in at least one university-level robotics course.
+-   **SC-04:** A portfolio of verified ROS 2 packages and Isaac Sim simulations is produced, one for each module.
+
+---
+
+## 7. Boundaries & Non-Goals
+
+To maintain focus, the book will NOT cover:
+-   The design and fabrication of custom robotic hardware from scratch.
+-   A comprehensive survey of all possible sensors and actuators.
+-   Deep dives into niche AI research topics not directly applicable to the core curriculum.
+-   The administrative aspects of running a research lab or business.
+
+---
+
+## 8. Quality Bar
+
+The quality standard is absolute and non-negotiable:
+-   **Zero Errors:** All code must be linted, tested, and guaranteed to run as described. All technical descriptions must be flawless.
+-   **Perfect Reproducibility:** Every step of every lab must be verifiable and produce the exact same outcome every time.
+-   **Exceptional Clarity:** Concepts must be explained with a clarity that makes them accessible to the entire target audience.
+
+---
+
+## 9. Core Values
+
+The following values, derived from `/sp.constitution`, will guide every decision:
+-   **Accuracy:** All content must be technically correct and reflect real-world physics and engineering standards.
+-   **Reproducibility:** Every workflow must be repeatable on the defined platforms.
+-   **Clarity:** Complex topics must be broken down into understandable components.
+-   **Safety:** All procedures, physical and digital, must prioritize safety and adhere to best practices.
+
+---
+
+## 10. Expected Learner Transformation
+
+A reader will transform from someone who *knows about* robotics to someone who *does* robotics. They will progress from understanding isolated concepts to architecting and implementing complex, integrated, embodied AI systems.
+
+---
+
+## 11. Technical Depth Expectations
+
+The content must be "production-aware," not "production-ready." This means:
+-   Code will be clean, modular, and demonstrate best practices.
+-   Architectures will be robust and scalable.
+-   However, the focus remains on pedagogy. We will not engineer for every possible edge case as one would for a commercial product, but we will acknowledge where such engineering would be necessary.
+
+---
+
+## 12. Required Toolchain and Platforms
+
+All content will be standardized on the official project toolchain defined in `/sp.architecture`:
+-   **Operating System:** Ubuntu 22.04 LTS
+-   **Robotics Middleware:** ROS 2 Humble Hawksbill
+-   **Simulation:** Gazebo (Classic), Unity, and NVIDIA Isaac Sim
+-   **Primary Hardware:** "Sim Rig" (NVIDIA RTX GPU) and "Edge Brain" (NVIDIA Jetson Orin)
+
+---
+
+## 13. Design Philosophy for Teaching
+
+Our pedagogical approach is **"Spiral Learning on a Digital Twin."**
+1.  **Introduce:** A concept is first introduced theoretically.
+2.  **Simulate:** It is immediately implemented and tested in a clean, controlled simulation.
+3.  **Integrate & Revisit:** In later chapters, the concept is revisited and integrated with more complex systems, increasing its depth and application.
+
+---
+
+## 14. Structure Vision
+
+The book is architected as a single, continuous learning path that builds mastery progressively.
+-   **Part 1 (Foundations):** Covers Physical AI theory, ROS 2, and basic simulation.
+-   **Part 2 (Embodiment & Perception):** Focuses on Gazebo, Isaac Sim, and computer vision.
+-   **Part 3 (Intelligence & Action):** Integrates VLA/LLM models for cognitive tasks.
+-   **Part 4 (Deployment & Capstone):** Covers sim-to-real transfer to physical hardware and culminates in the final project.
+
+Modules are designed to be logically sequential, but also self-contained enough to be used as standalone references for specific topics.
+
+---
+
+## 15. Commitment to Factual Correctness and Citation Rigor
+
+As mandated by the `/sp.constitution`:
+-   All factual claims must be supported by evidence from primary sources.
+-   All sources must be cited using APA 7th Edition.
+-   Plagiarism in any form is strictly forbidden. All content must be original or properly attributed.

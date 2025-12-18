@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Book Overview",
+    "description": "An introduction to the Physical AI and Humanoid Robotics book and course package.",
+    "icon": "fa-book",
+    "chapters": [
+      {
+        "title": "Physical AI and Humanoid Robotics Book",
+        "slug": "Physical_AI_and_Humanoid_Robotics_BOOK"
+      },
+      {
+        "title": "Physical AI and Humanoid Robotics Course Package",
+        "slug": "Physical_AI_and_Humanoid_Robotics_Course_Package"
+      },
+      {
+        "title": "The Complete Book",
+        "slug": "PHYSICAL_AI_HUMANOID_ROBOTICS_COMPLETE_BOOK"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Advanced Control & Locomotion",
+    "description": "Deep dive into bipedal control, gait planning, and whole-body coordination.",
+    "icon": "fa-shoe-prints",
+    "chapters": [
+      {
+        "title": "Bipedal Locomotion and Gait Planning",
+        "slug": "chapter-bipedal-locomotion-and-gait-planning"
+      },
+      {
+        "title": "Whole-Body Control",
+        "slug": "chapter-whole-body-control"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Ethics & Capstone",
+    "description": "Explore the ethical implications of Physical AI and assemble a full humanoid stack.",
+    "icon": "fa-brain",
+    "chapters": [
+      {
+        "title": "The Ethics of Physical AI",
+        "slug": "chapter-the-ethics-of-physical-ai"
+      },
+      {
+        "title": "Capstone: Assembling the Full Stack",
+        "slug": "capstone-assembling-the-full-stack"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Project & Weekly Breakdown",
+    "description": "Guidance on project diagnosis, recovery, and weekly study plans.",
+    "icon": "fa-tasks",
+    "chapters": [
+      {
+        "title": "Project Diagnosis and Recovery Plan",
+        "slug": "PROJECT_DIAGNOSIS_AND_RECOVERY_PLAN"
+      },
+      {
+        "title": "Weekly Breakdown",
+        "slug": "weekly-breakdown"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Book Index",
+    "description": "A comprehensive index of topics covered in the book.",
+    "icon": "fa-list",
+    "chapters": [
+      {
+        "title": "Book Index",
+        "slug": "Book-Index"
+      }
+    ]
+  }
+]

@@ -1,0 +1,566 @@
+# Spec-Kit Plan Document: Technical Requirements Planning
+# Project: Physical AI & Humanoid Robotics Capstone
+
+**Project**: Physical AI & Humanoid Robotics Capstone  
+**Document Type**: Technical Plan (sp.plan)  
+**Created**: 2025-12-08  
+**Status**: Active  
+**Purpose**: Guide the generation of technical plan documents for course modules and capstone components.
+
+---
+
+## 1. Plan Document Overview
+
+A **Technical Plan** (`sp.plan`) translates business requirements into actionable technical architecture, research strategies, and validation approaches. It bridges the gap between high-level specifications (`sp.spec`) and detailed implementation (`sp.chapter`). Each plan document must include architecture sketches, section structures, research methodologies, and quality validation frameworks.
+
+### 1.1. Plan Document Goals
+
+- **G-P001**: To decompose high-level course objectives into concrete technical components.
+- **G-P002**: To establish clear architectural decisions with documented tradeoffs.
+- **G-P003**: To define research-while-writing methodologies for technical content generation.
+- **G-P004**: To establish quality gates and acceptance criteria before implementation begins.
+- **G-P005**: To enable rapid iteration and validation of technical approaches.
+
+### 1.2. Plan Document Scope
+
+**In Scope:**
+- Architecture sketches and system diagrams
+- Module-level section organization and decomposition
+- Research approach (concurrent research + writing methodology)
+- Decision documentation with options and tradeoffs
+- Testing and validation strategies
+- Quality acceptance criteria
+
+**Out of Scope:**
+- Detailed implementation code (addressed in `sp.chapter`)
+- Marketing or business strategy decisions
+- Administrative or schedule planning
+- Individual lesson plans (those belong in chapter content)
+
+---
+
+## 2. Plan Document Structure
+
+Every technical plan must follow this hierarchical structure:
+
+### 2.1. Executive Summary
+
+**Purpose**: Provide a 150-word overview of the technical plan.
+
+**Contents:**
+- What is being planned
+- Why it matters (connection to course objectives)
+- Key technical challenges identified
+- Success definition
+
+**Example:**
+```
+This technical plan outlines the Vision-Language-Action (VLA) Integration module 
+for the capstone course. The module bridges high-level natural language commands 
+and low-level robot control through large language models. Key challenges include 
+latency optimization for real-time control, handling ambiguous natural language 
+inputs, and ensuring safe task execution. Success is achieved when a humanoid robot 
+executes complex, multi-step tasks based on voice commands with >85% task completion.
+```
+
+### 2.2. Architecture Sketch
+
+**Purpose**: Provide visual and textual representations of the system design.
+
+**Contents:**
+
+#### 2.2.1. High-Level Architecture Diagram
+- ASCII diagram or reference to external diagram
+- Show major components and their interactions
+- Identify inputs, outputs, and data flow
+- Use the following format for ASCII diagrams:
+
+```
+Component A ──input──> Processing ──output──> Component B
+    │                      │
+    └──feedback loop───────┘
+```
+
+#### 2.2.2. Component Decomposition
+For each major component, document:
+- **Component Name**: Unique identifier
+- **Purpose**: What problem it solves
+- **Inputs/Outputs**: Data and signal contracts
+- **Dependencies**: What it depends on
+- **Key Constraints**: Performance, safety, or reliability requirements
+
+**Example Table:**
+
+| Component | Purpose | Inputs | Outputs | Key Constraint |
+|-----------|---------|--------|---------|-----------------|
+| Voice Encoder | Convert speech to text | Audio stream | Text string | <200ms latency |
+| LLM Planner | Generate task plan | Text description | JSON action plan | Deterministic output |
+| Action Executor | Execute robot commands | JSON action plan | Robot state | Safety-bounded motion |
+
+#### 2.2.3. Data Flow Diagram
+- Document the flow of information between components
+- Identify decision points and branching logic
+- Note any asynchronous or parallel processing
+
+---
+
+### 2.3. Section Structure & Content Organization
+
+**Purpose**: Define the logical sections of content to be authored.
+
+**Format**: Hierarchical outline with learning objectives per section.
+
+**Template:**
+
+```
+## Module: [Module Name]
+**Learning Objective**: [Single, measurable outcome]
+
+### Section 1: [Topic Name]
+- **Objective**: [What students understand after this section]
+- **Key Concepts**: List 3-5 core concepts
+- **Research Areas**: Topics needing investigation
+- **Acceptance Criteria**: How we know this section is complete
+
+### Section 2: [Topic Name]
+- **Objective**: ...
+```
+
+**Example:**
+
+```
+## Module: Vision-Language-Action Integration
+**Learning Objective**: Students can implement an end-to-end system that converts voice commands into coordinated robot behaviors.
+
+### Section 1: Natural Language Understanding for Robotics
+- **Objective**: Understand how LLMs interpret task descriptions
+- **Key Concepts**: 
+  - Prompt engineering for task specification
+  - Ambiguity resolution in natural language
+  - Semantic parsing of robot actions
+- **Research Areas**: 
+  - Best practices in robotics prompt design
+  - Domain-specific language considerations
+  - Error handling for misunderstood inputs
+- **Acceptance Criteria**: 
+  - Documented patterns for writing unambiguous task descriptions
+  - Case studies of failing/succeeding prompts
+  - Student can write prompts achieving >90% success rate
+
+### Section 2: Integrating GPT-4o with ROS 2
+- **Objective**: Connect LLM outputs to robotic action systems
+- **Key Concepts**:
+  - JSON action schemas
+  - ROS 2 action client patterns
+  - State synchronization
+- **Research Areas**:
+  - Performance benchmarking of LLM API calls
+  - Error recovery and retry strategies
+  - Resource constraints on Jetson hardware
+- **Acceptance Criteria**:
+  - Working code example with <500ms end-to-end latency
+  - Documented fallback behaviors
+  - 10+ integration test cases passing
+```
+
+---
+
+### 2.4. Research Approach: Concurrent Methodology
+
+**Purpose**: Define how research and writing are interwoven (not sequential).
+
+**Principle**: Research happens *during* content writing, informed by writing needs. This prevents over-researching and ensures relevance.
+
+**Research-Concurrent Process:**
+
+1. **Write First Draft**: Author outlines and begins drafting content based on existing knowledge.
+2. **Identify Research Gaps**: As writing progresses, specific knowledge gaps become apparent.
+3. **Targeted Research**: Only research the specific gaps identified during drafting.
+4. **Integrate Findings**: Incorporate research into the draft with proper citations (APA 7th edition).
+5. **Validate & Iterate**: Verify technical accuracy and completeness.
+6. **Finalize**: Produce publication-ready content.
+
+**Research Plan Template:**
+
+```
+### Research Areas for [Section Name]
+
+**Gap 1: [Specific Knowledge Need]**
+- **Question**: What specific information is needed?
+- **Sources to Investigate**: 
+  - Official documentation: [URL/reference]
+  - Academic papers: [keywords to search]
+  - Industry sources: [company/expert names]
+- **Validation Method**: How will we verify accuracy?
+- **Estimated Effort**: [hours]
+
+**Gap 2: [Specific Knowledge Need]**
+- **Question**: ...
+```
+
+**Research Execution Constraints:**
+
+- **Source Hierarchy** (from Constitution):
+  1. Primary: Official documentation, peer-reviewed papers, datasheets
+  2. Secondary: Textbooks, survey articles
+  3. Tertiary: Reputable technical blogs/articles
+  - **Prohibited**: Reddit, personal blogs, wikis without editorial oversight
+
+- **Citation Format**: All sources cited in-line with APA 7th Edition bibliography
+
+- **Verification**: For critical data, minimum 2 independent sources
+
+---
+
+### 2.5. Decision Log: Important Technical Choices
+
+**Purpose**: Document critical decisions with tradeoff analysis.
+
+**Format**: Table with decision analysis.
+
+**Template:**
+
+| Decision ID | Decision | Option A | Option B | Option C | Selected | Rationale | Tradeoffs |
+|------------|----------|----------|----------|----------|----------|-----------|-----------|
+| D-VLA-001 | LLM Platform | GPT-4o | Claude | Llama 2 | GPT-4o | Multimodal capability, real-time API | Higher cost, rate limiting |
+| D-VLA-002 | Architecture Pattern | Microservices | Monolith | Event-Driven | Microservices | Scalability, independent testing | Increased complexity |
+
+**Decision Entry Contents:**
+
+- **Decision ID**: Unique identifier (e.g., D-MODULE-NNN)
+- **Decision**: The architectural/technical choice being made
+- **Options**: Alternatives considered (minimum 2)
+- **Rationale**: Why the selected option was chosen
+- **Tradeoffs**: What is gained and lost
+- **Constraints**: Technical, cost, or schedule factors influencing the decision
+- **Review Date**: When this decision should be revisited
+
+**Mandatory Decisions to Document:**
+
+- Technology/platform selections
+- Architectural patterns (e.g., event-driven vs. request-response)
+- Integration points
+- Safety/reliability tradeoffs
+- Performance targets
+- Resource allocation
+
+---
+
+### 2.6. Quality Validation & Acceptance Criteria
+
+**Purpose**: Define how technical completeness and correctness will be verified.
+
+**Validation Framework:**
+
+#### 2.6.1. Code-Based Validation
+
+**Acceptance Criteria:**
+- [ ] All code examples are syntactically correct and runnable
+- [ ] Code adheres to language best practices
+- [ ] Dependencies and versions are explicitly documented
+- [ ] Code examples have inline comments explaining key logic
+- [ ] At least one end-to-end test case validates core functionality
+- [ ] All code examples are reproducible by following written instructions
+
+**Test Strategy:**
+```
+Test Case TC-VLA-001: Voice Command to Robot Action
+- Input: Audio file with command "move to the kitchen"
+- Expected Output: Robot navigates to kitchen location
+- Validation: ROS 2 logs show correct navigation stack calls
+- Success Criteria: Task completes in <10 seconds
+```
+
+#### 2.6.2. Technical Content Validation
+
+**Acceptance Criteria:**
+- [ ] All factual claims are cited with APA 7th edition
+- [ ] Technical diagrams are accurate and labeled
+- [ ] Key parameters and specifications are sourced
+- [ ] Algorithms/formulas match cited sources
+- [ ] No contradictions with Constitution principles
+- [ ] Content aligns with declared Learning Objectives
+
+**Validation Method:**
+- Technical review by 2+ subject matter experts
+- Cross-reference with primary sources
+- Peer review against official documentation
+
+#### 2.6.3. Reproducibility Validation
+
+**Acceptance Criteria:**
+- [ ] All experimental procedures can be followed exactly as written
+- [ ] Hardware/software requirements are explicit
+- [ ] Installation steps produce working environment
+- [ ] Code examples execute without modification
+- [ ] Results are repeatable (not one-time successes)
+
+**Test Strategy:**
+```
+Validation: Independent reproduction by junior engineer
+- Setup environment following Section 2.x instructions
+- Execute code examples exactly as written
+- Verify outputs match documented results
+- Time each step and document any deviations
+```
+
+#### 2.6.4. Safety & Correctness Validation
+
+**Acceptance Criteria:**
+- [ ] All robot operation code includes safety constraints
+- [ ] Motion limits are enforced
+- [ ] Emergency stop patterns are documented
+- [ ] Error handling covers failure modes
+- [ ] No undocumented assumptions
+
+**Validation Method:**
+- Safety review by robotics engineer
+- Simulation-based testing before hardware
+- Error injection testing
+
+---
+
+### 2.7. Phases: Research → Foundation → Analysis → Synthesis
+
+**Purpose**: Structure content development in phases that build understanding progressively.
+
+**Phase 1: Research**
+- **Duration**: Variable (concurrent with writing)
+- **Activities**:
+  - Identify knowledge gaps during initial draft
+  - Conduct targeted research on specific topics
+  - Compile sources and citations
+  - Verify technical accuracy
+- **Deliverables**:
+  - Annotated bibliography with source summaries
+  - Research notes and key findings
+  - Verified facts and data points
+
+**Phase 2: Foundation**
+- **Duration**: 40% of content effort
+- **Activities**:
+  - Establish foundational concepts
+  - Define terminology and mental models
+  - Provide historical/contextual background
+  - Build reader confidence in fundamentals
+- **Content Examples**:
+  - "What is Vision-Language-Action?"
+  - "History of LLMs in robotics"
+  - "ROS 2 fundamentals (as background)"
+- **Validation**: Reader can explain concepts without implementation
+
+**Phase 3: Analysis**
+- **Duration**: 35% of content effort
+- **Activities**:
+  - Decompose complex systems
+  - Explain mechanisms and interactions
+  - Present design alternatives
+  - Document tradeoff analysis
+- **Content Examples**:
+  - "How Vision-Language-Action systems work"
+  - "Comparing different LLM integration patterns"
+  - "Performance analysis of different approaches"
+- **Validation**: Reader understands how components interact
+
+**Phase 4: Synthesis**
+- **Duration**: 25% of content effort
+- **Activities**:
+  - Integrate multiple concepts
+  - Present end-to-end examples
+  - Provide working code implementations
+  - Guide practical application
+- **Content Examples**:
+  - "Building a complete VLA system"
+  - "Debugging a multi-component integration"
+  - "Capstone project: voice-controlled humanoid"
+- **Validation**: Reader can build working system
+
+**Phase Progression Diagram:**
+
+```
+Foundation (40%)    Analysis (35%)      Synthesis (25%)
+──────────────      ──────────────      ──────────────
+
+Concepts            How things          Applied
+Terminology         work together       examples
+Background          Tradeoffs           Working code
+Mental models       Decomposition       Integration
+                                        Troubleshooting
+
+└─Research concurrent throughout all phases───┘
+└─Citations in every phase───────────────────┘
+└─Safety/correctness validation ongoing──────┘
+```
+
+---
+
+## 3. Plan Document Conventions
+
+### 3.1. Naming and Versioning
+
+**File Naming:**
+- `sp.plan.[module-name].md` for module plans
+- Example: `sp.plan.vla-integration.md`
+
+**Version Control:**
+- Include version number and date in header
+- Track major revisions and decision changes
+
+### 3.2. Cross-References
+
+- Reference chapters: `See sp.chapter.[name] for implementation details`
+- Reference specifications: `Per sp.spec section 4.7 on VLA modules`
+- Reference constitution: `Per Constitution section 2.1 on Verifiable Truth`
+
+### 3.3. Markdown Conventions
+
+- Use h2 (`##`) for top-level sections
+- Use h3 (`###`) for subsections
+- Use h4 (`####`) for detailed items
+- Tables for decision matrices and component tables
+- ASCII diagrams for simple flows
+- Reference diagrams for complex architecture
+
+---
+
+## 4. Plan Approval & Iteration
+
+**Approval Checklist:**
+
+- [ ] Architecture sketch clearly communicates system design
+- [ ] Section structure aligns with learning objectives
+- [ ] All critical decisions are documented with rationale
+- [ ] Research approach is feasible and targeted
+- [ ] Acceptance criteria are measurable and testable
+- [ ] No contradictions with project Constitution
+- [ ] All four phases (Research, Foundation, Analysis, Synthesis) are represented
+- [ ] Technical SME has reviewed for feasibility
+
+**Iteration Triggers:**
+
+- New research findings require architectural changes
+- Validation tests reveal feasibility issues
+- Stakeholder feedback identifies missing components
+- Technology landscape changes affect technology selections
+
+---
+
+## 5. Success Criteria for a Complete Plan
+
+- **SC-P001**: Architecture is clearly communicated in diagrams and text
+- **SC-P002**: Section structure contains 4-8 major sections with clear learning progression
+- **SC-P003**: Every critical technology/architecture decision is documented with 2+ options
+- **SC-P004**: Research approach is practical and integrated with writing timeline
+- **SC-P005**: Acceptance criteria are specific, measurable, and testable
+- **SC-P006**: All four phases (Research, Foundation, Analysis, Synthesis) contain content
+- **SC-P007**: Plan is reviewed and approved by technical SME before implementation begins
+
+---
+
+## 6. Relationship to Constitution & Specs
+
+**Plan ← Spec Relationship:**
+- Plans translate goals from sp.spec into architecture
+- Plans inherit Constitution principles (Verifiable Truth, Reproducibility, etc.)
+- Plans reference sp.spec objectives and learning goals
+
+**Plan → Chapter Relationship:**
+- Plans provide roadmap for chapter creation (sp.chapter)
+- Chapters implement sections and research areas defined in the plan
+- Chapters must satisfy acceptance criteria from plan
+
+**Constitution Integration:**
+- All plans must adhere to:
+  - Principle 2.1: Factual Verification Mandate
+  - Principle 2.2: Source Triangulation
+  - Section 6: Research and Sourcing Standards
+  - All citations in APA 7th Edition format
+
+---
+
+## 7. Template: Plan Document Shell
+
+Use this template to generate new technical plans:
+
+```markdown
+# Technical Plan: [Module Name]
+**Module**: [Official module name from sp.spec]  
+**Created**: [Date]  
+**Status**: Draft / Review / Approved  
+**Author**: [Name]  
+**Reviewed By**: [SME names]
+
+---
+
+## 1. Executive Summary
+[150-word overview]
+
+## 2. Architecture Sketch
+### 2.1 High-Level Architecture
+[ASCII diagram or description]
+
+### 2.2 Component Decomposition
+[Component table]
+
+### 2.3 Data Flow
+[Data flow description]
+
+## 3. Section Structure & Content Organization
+[Hierarchical outline with objectives and acceptance criteria]
+
+## 4. Research Approach
+[Concurrent research methodology and specific knowledge gaps]
+
+## 5. Decision Log
+[Technology and architectural decisions with tradeoff analysis]
+
+## 6. Quality Validation & Acceptance Criteria
+### 6.1 Code-Based Validation
+[Test cases and acceptance criteria]
+
+### 6.2 Technical Content Validation
+[Review and verification approach]
+
+### 6.3 Reproducibility Validation
+[Independent reproduction test cases]
+
+### 6.4 Safety & Correctness
+[Safety and error handling validation]
+
+## 7. Phases: Research → Foundation → Analysis → Synthesis
+[Content breakdown by phase with deliverables]
+
+## 8. Approval Checklist
+- [ ] Architecture is clear
+- [ ] Decisions documented
+- [ ] Research approach feasible
+- [ ] Acceptance criteria measurable
+- [ ] Constitution alignment verified
+- [ ] Technical SME approval
+
+## 9. References & Bibliography
+[APA 7th Edition citations]
+```
+
+---
+
+## 8. Implementation Workflow
+
+When creating a plan:
+
+1. **Start with Business Requirements**: Review sp.spec for the module
+2. **Sketch Architecture**: Create visual representation of system design
+3. **Define Sections**: Break module into logical content sections
+4. **Identify Decisions**: List technology choices and tradeoffs
+5. **Plan Research**: Identify what must be learned during writing
+6. **Define Acceptance Criteria**: Establish validation gates
+7. **Map Phases**: Assign content to Research → Foundation → Analysis → Synthesis
+8. **Review & Approve**: Get technical SME sign-off before implementation
+9. **Generate Chapters**: Use plan to guide sp.chapter creation
+10. **Validate**: Execute acceptance criteria tests during chapter authoring
+
+---
+
+**End of sp.plan Definition**
+
+*This document establishes the standard for technical planning across all modules of the Physical AI & Humanoid Robotics Capstone course.*

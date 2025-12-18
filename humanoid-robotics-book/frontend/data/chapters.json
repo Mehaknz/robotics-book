@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Module 1: The Robotic Nervous System (ROS 2)",
+        "slug": "module-1-robotic-nervous-system-ros-2",
+        "content": "Focus: Middleware for robot control. This module covers ROS 2 Nodes, Topics, and Services, bridging Python Agents to ROS controllers using rclpy, and understanding URDF for humanoids."
+    },
+    {
+        "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+        "slug": "module-2-digital-twin-gazebo-unity",
+        "content": "Focus: Physics simulation and environment building. This module covers simulating physics in Gazebo, high-fidelity rendering in Unity, and simulating sensors like LiDAR, Depth Cameras, and IMUs."
+    },
+    {
+        "title": "Chapter 3: Advanced Robot Modeling (URDF & XACRO)",
+        "slug": "chapter-3-advanced-robot-modeling-urdf-xacro",
+        "content": "Go beyond basic URDF by using the XACRO macro language to create clean, reusable, and configurable models for complex humanoid robots."
+    },
+    {
+        "title": "Chapter 4: Real-time Control with ROS 2",
+        "slug": "chapter-4-real-time-control-with-ros-2",
+        "content": "Learn to write real-time capable ROS 2 controllers, manage execution, and ensure deterministic performance for critical tasks like balancing."
+    },
+    {
+        "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+        "slug": "module-3-ai-robot-brain-nvidia-isaac",
+        "content": "Focus: Advanced perception and training. This module covers NVIDIA Isaac Sim for synthetic data generation, Isaac ROS for hardware-accelerated VSLAM, and Nav2 for bipedal path planning."
+    },
+    {
+        "title": "Module 4: Vision-Language-Action (VLA)",
+        "slug": "module-4-vision-language-action-vla",
+        "content": "Focus: The convergence of LLMs and Robotics. This module covers using OpenAI Whisper for voice commands, LLMs for cognitive planning, and a capstone project involving an autonomous humanoid."
+    },
+    {
+        "title": "Chapter 7: Advanced Navigation with Nav2",
+        "slug": "chapter-7-advanced-navigation-with-nav2",
+        "content": "Configure the Nav2 stack for dynamic environments, including costmap plugins, behavior trees, and waypoint following for humanoid navigation."
+    },
+    {
+        "title": "Chapter 8: SLAM and 3D Perception",
+        "slug": "chapter-8-slam-and-3d-perception",
+        "content": "Implement and tune visual and LiDAR-based SLAM algorithms to enable a robot to build a map of its environment and localize itself within it."
+    },
+    {
+        "title": "Chapter 12: Human-Robot Interaction (HRI)",
+        "slug": "chapter-12-human-robot-interaction-hri",
+        "content": "Design safe and intuitive interactions, exploring gesture recognition, social cues, and proxemics for collaborative humanoid applications."
+    },
+    {
+        "title": "Chapter 13: Manipulation with MoveIt 2",
+        "slug": "chapter-13-manipulation-with-moveit-2",
+        "content": "Integrate the MoveIt 2 motion planning framework to enable your humanoid to perform complex arm and hand manipulation tasks."
+    },
+    {
+        "title": "Chapter 16: Deep Learning for Computer Vision",
+        "slug": "chapter-16-deep-learning-for-computer-vision",
+        "content": "Apply convolutional neural networks (CNNs) for object detection, segmentation, and pose estimation using Isaac ROS and PyTorch."
+    },
+    {
+        "title": "Chapter 17: End-to-End Training for Robotics",
+        "slug": "chapter-17-end-to-end-training-for-robotics",
+        "content": "Explore imitation learning and behavioral cloning techniques to train robot policies directly from human demonstrations or sensor data."
+    },
+    {
+        "title": "Chapter 18: Safety Systems and Failsafes",
+        "slug": "chapter-18-safety-systems-and-failsafes",
+        "content": "Design critical safety protocols, emergency stops (E-stops), and fault-tolerant behaviors to ensure safe operation in real-world environments."
+    },
+    {
+        "title": "Chapter 22: Bipedal Locomotion and Gait Planning",
+        "slug": "chapter-22-bipedal-locomotion-and-gait-planning",
+        "content": "Dive deep into the dynamics of walking, running, and balancing, exploring Zero Moment Point (ZMP) and Capture Point stability criteria."
+    },
+    {
+        "title": "Chapter 23: Whole-Body Control",
+        "slug": "chapter-23-whole-body-control",
+        "content": "Learn techniques for coordinating the entire robot's body to perform complex tasks that involve balance, manipulation, and locomotion simultaneously."
+    },
+    {
+        "title": "Chapter 25: The Ethics of Physical AI",
+        "slug": "chapter-25-the-ethics-of-physical-ai",
+        "content": "Discuss the societal impact, ethical considerations, and potential biases in deploying autonomous humanoid robots in the real world."
+    },
+    {
+        "title": "Chapter 26: Capstone: Assembling the Full Stack",
+        "slug": "chapter-26-capstone-assembling-the-full-stack",
+        "content": "A guide to integrating all the concepts—from perception and planning to control and interaction—into a final, functional humanoid robot project."
+    }
+]

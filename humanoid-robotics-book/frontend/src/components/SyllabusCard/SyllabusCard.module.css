@@ -1,0 +1,141 @@
+:root {
+  --card-bg: #ffffff;
+  --card-border: #e3e8ee;
+  --card-shadow: rgba(0, 0, 0, 0.04);
+  --title-color: #1c3d5a;
+  --focus-bg: #f0f4f8;
+  --focus-text: #0056b3;
+  --description-color: #5a7184;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+}
+
+[data-theme='dark'] {
+  --card-bg: #2c3e50;
+  --card-border: #3e5369;
+  --card-shadow: rgba(0, 0, 0, 0.2);
+  --title-color: #e0f2ff;
+  --focus-bg: #22303f;
+  --focus-text: #87c0ff;
+  --description-color: #b0c4de;
+  --link-color: #87c0ff;
+  --link-hover-color: #aadeff;
+}
+
+/* Main card styling */
+.moduleCard {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.moduleCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px var(--card-shadow);
+}
+
+/* Header contains title and chevron */
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.moduleTitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.4;
+}
+
+/* Chevron icon for accordion state */
+.chevronIcon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--focus-bg);
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.chevronIcon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-style: solid;
+    border-color: var(--focus-text);
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+.moduleFocus {
+    font-size: 0.9rem;
+    color: var(--focus-text);
+    background-color: var(--focus-bg);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+}
+
+/* Accordion transition wrapper */
+.chaptersWrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.chaptersWrapperOpen {
+    max-height: 500px; /* Should be larger than the content */
+}
+
+/* Inner content padding */
+.chaptersContent {
+    padding-top: 1rem;
+    border-top: 1px solid var(--card-border);
+    margin-top: 1rem;
+}
+
+.chaptersTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin: 0 0 0.75rem 0;
+}
+
+.chaptersList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chaptersList li {
+    margin-bottom: 0.5rem;
+}
+
+.chaptersList a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.chaptersList a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}

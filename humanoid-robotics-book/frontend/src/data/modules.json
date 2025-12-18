@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Module 1: The Robotic Nervous System (ROS 2)",
+    "description": "Focus: Middleware for robot control. This module covers ROS 2 Nodes, Topics, and Services, bridging Python Agents to ROS controllers using rclpy, and understanding URDF for humanoids.",
+    "icon": "fa-robot",
+    "chapters": [
+      {
+        "title": "Chapter 3: Advanced Robot Modeling (URDF & XACRO)",
+        "slug": "chapter-advanced-robot-modeling-urdf-xacro"
+      },
+      {
+        "title": "Chapter 4: Real-time Control with ROS 2",
+        "slug": "chapter-real-time-control-with-ros-2"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Module 2: The Digital Twin (Gazebo & Unity)",
+    "description": "Focus: Physics simulation and environment building. This module covers simulating physics in Gazebo, high-fidelity rendering in Unity, and simulating sensors like LiDAR, Depth Cameras, and IMUs.",
+    "icon": "fa-tools",
+    "chapters": [
+      {
+        "title": "Chapter 7: Advanced Navigation with Nav2",
+        "slug": "chapter-advanced-navigation-with-nav2"
+      },
+      {
+        "title": "Chapter 8: SLAM and 3D Perception",
+        "slug": "chapter-slam-and-3d-perception"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Module 3: The AI-Robot Brain (NVIDIA Isaac™)",
+    "description": "Focus: Advanced perception and training. This module covers NVIDIA Isaac Sim for synthetic data generation, Isaac ROS for hardware-accelerated VSLAM, and Nav2 for bipedal path planning.",
+    "icon": "fa-cogs",
+    "chapters": [
+      {
+        "title": "Chapter 12: Human-Robot Interaction (HRI)",
+        "slug": "chapter-human-robot-interaction-hri"
+      },
+      {
+        "title": "Chapter 13: Manipulation with MoveIt 2",
+        "slug": "chapter-manipulation-with-moveit-2"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Module 4: Vision-Language-Action (VLA)",
+    "description": "Focus: The convergence of LLMs and Robotics. This module covers using OpenAI Whisper for voice commands, LLMs for cognitive planning, and a capstone project involving an autonomous humanoid.",
+    "icon": "fa-brain",
+    "chapters": [
+      {
+        "title": "Chapter 16: Deep Learning for Computer Vision",
+        "slug": "chapter-deep-learning-for-computer-vision"
+      },
+      {
+        "title": "Chapter 17: End-to-End Training for Robotics",
+        "slug": "chapter-end-to-end-training-for-robotics"
+      }
+    ]
+  }
+]

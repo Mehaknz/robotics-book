@@ -1,0 +1,21 @@
+.syllabusGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile */
+  gap: 1.5rem;
+  padding: 2rem 0;
+  grid-auto-rows: min-content; /* Ensure rows adapt to content height */
+}
+
+/* 2 columns on tablets */
+@media (min-width: 768px) {
+  .syllabusGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on desktops for a more compact view */
+@media (min-width: 1024px) {
+  .syllabusGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

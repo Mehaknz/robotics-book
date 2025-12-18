@@ -1,0 +1,9 @@
+<package format="3">
+  <name>my_robot_control</name>
+  <version>0.0.1</version>
+  <description>Humanoid robotics control package</description>
+  <maintainer email="mnaz97125@gmail.com">mehak</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+</package>

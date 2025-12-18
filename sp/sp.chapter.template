@@ -1,0 +1,161 @@
+---
+title: "Chapter X: [Chapter Title]"
+sidebar_position: X
+description: "[A one-sentence summary of the chapter's content and purpose.]"
+tags: [keyword1, keyword2, keyword3]
+version: "1.0.0"
+last_reviewed: "YYYY-MM-DD"
+authors: ["[Author Name 1]", "[Author Name 2]"]
+difficulty_level: "Beginner | Intermediate | Advanced"
+---
+
+<!--
+================================================================================
+CHAPTER AUTHOR'S CHECKLIST & GUIDELINES
+================================================================================
+
+This template is governed by the rules in /sp.constitution, /sp.vision, and /sp.architecture.
+
+**Acceptance Criteria for this Chapter:**
+- [ ] At least one Mermaid.js or other approved diagram is included.
+- [ ] A minimum of three unique, high-quality references are cited in APA 7th Edition style.
+- [ ] All code examples are clean, reproducible, and tested against the specified toolchain.
+- [ ] All technical claims are fact-checked and attributable to a source.
+- [ ] The chapter successfully meets all its stated Learning Objectives.
+- [ ] The "last_reviewed" date in the frontmatter is current.
+- [ ] The Change Log at the bottom is updated with any modifications.
+
+**Code Standards:**
+- All code MUST run on the project's official toolchain (Python 3.10+, ROS 2 Humble, etc.).
+- Follow ROS 2 conventions for nodes, topics, services, and actions.
+- Code must be self-contained in examples or clearly reference a file in the `/examples` directory.
+
+**Technical Accuracy:**
+- All facts, figures, and technical specifications must be verified from primary sources (official documentation, peer-reviewed papers).
+- Cross-link to other relevant chapters where appropriate (e.g., `[See Chapter 2 for more on ROS 2 Nodes](./part-1/02-ros-2-nervous-system.md)`).
+================================================================================
+-->
+
+# Chapter X: [Chapter Title]
+
+### Summary
+*[A 3–5 sentence paragraph summarizing the core problem this chapter solves, the technologies used, and the key skills the reader will acquire. This section should set the stage and manage reader expectations.]*
+
+### Learning Objectives
+*Upon completing this chapter, you will be able to:*
+-   **Objective 1:** [Describe the theoretical concept of...]
+-   **Objective 2:** [Design a system component using...]
+-   **Objective 3:** [Implement a practical example involving...]
+-   **Objective 4:** [Analyze and troubleshoot issues related to...]
+-   **Objective 5:** [Integrate Technology A with Technology B to achieve...]
+
+### Prerequisites
+-   **Knowledge:** [e.g., A solid understanding of Python and object-oriented programming. Completion of Chapter X-1.]
+-   **Estimated Reading Time:** [e.g., 90 minutes]
+-   **Required Tools & Software:** [e.g., Ubuntu 22.04, ROS 2 Humble, NVIDIA Isaac Sim 2023.1, Gazebo 11]
+
+---
+
+# Introduction
+*[Provide an engaging introduction that explains the importance of this chapter's topic within the broader context of Physical AI and humanoid robotics. Clearly state the problem or challenge that will be addressed.]*
+
+# Theory & Concepts
+*[Explain the core theoretical principles underpinning this chapter's topic. This section should be clear, concise, and use analogies where helpful. All claims must be supported by citations.]*
+
+## Concept 1: [Name of First Core Concept]
+*[Detailed explanation...]*
+
+## Concept 2: [Name of Second Core Concept]
+*[Detailed explanation...]*
+
+# Technical Foundations
+*[Dive into the specific technologies used in this chapter. This is not a tutorial, but a technical overview of the tools and how they apply to the problem at hand.]*
+
+## [Technology 1, e.g., ROS 2]
+*[Explain the relevant aspects of this technology for this chapter, e.g., "In this chapter, we focus on ROS 2 Actions for long-running tasks..."]*
+
+## [Technology 2, e.g., URDF]
+*[Explain the relevant aspects of this technology, e.g., "We will define the robot's inertial properties and collision geometry in its URDF..."]*
+
+# Step-by-Step Implementation
+*[This section contains detailed, numbered instructions for building the chapter's main technical artifact. Each step must be clear, actionable, and verifiable.]*
+
+1.  **Step 1: Setting up the Workspace**
+    *[Instructions...]*
+    ```bash
+    # Example setup command
+    mkdir -p ~/ros2_ws/src && cd ~/ros2_ws
+    ```
+2.  **Step 2: Writing the ROS 2 Node**
+    *[Instructions...]*
+    ```python
+    # /examples/python/chapter-X/my_node.py
+    import rclpy
+    
+    def main():
+        print("This is the main node for Chapter X.")
+    
+    if __name__ == '__main__':
+        main()
+    ```
+
+# Diagrams & System Architecture
+*[Provide diagrams to visually explain the system being built. All diagrams must use Mermaid.js for version control and consistency.]*
+
+## Software Data Flow
+```mermaid
+graph TD
+    A[Input Sensor Data] --> B(ROS 2 Perception Node);
+    B --> C{Decision Logic};
+    C --> D[ROS 2 Control Node];
+    D --> E[Robot Actuators];
+```
+
+## Hardware Topology
+*[Explain how the physical or simulated hardware components connect and interact.]*
+
+# Example Lab / Hands-On Exercise
+*[A self-contained, practical exercise that allows the reader to apply everything they've learned in the chapter.]*
+
+**Goal:** [A clear, one-sentence goal for the lab.]
+
+1.  **Launch the Simulation:**
+    ```bash
+    ros2 launch my_robot_gazebo simulation.launch.py
+    ```
+2.  **Run Your Controller:**
+    ```bash
+    ros2 run my_package my_node
+    ```
+3.  **Observe the Output:**
+    -   **Expected Output:** *[Describe exactly what the reader should see, e.g., "The robot should move forward 0.5 meters, pick up the block, and place it in the red bin."]*
+
+# Troubleshooting & Common Mistakes
+-   **Error:** `colcon build` fails with a dependency error.
+    -   **Solution:** Ensure you have run `rosdep install --from-paths src -y --ignore-src` from your workspace root.
+-   **Issue:** The robot moves unpredictably in the simulation.
+    -   **Solution:** Check the `<inertia>` tags in your URDF file for correctness. Incorrect mass or moment of inertia values are a common cause.
+
+# Summary & Key Takeaways
+*[Concisely summarize the chapter's most important points in a bulleted list. This serves as a quick reference and reinforces the learning objectives.]*
+-   [Key takeaway 1]
+-   [Key takeaway 2]
+-   [Key takeaway 3]
+
+---
+
+# References
+*[List all cited sources here in APA 7th Edition format. These must correspond to claims made in the text.]*
+-   [Author, A. A. (Year). *Title of Book*. Publisher.]
+-   [NVIDIA. (Year). *Isaac Sim Documentation*. Retrieved from URL.]
+
+# Change Log
+| Version | Date       | Authors         | Summary of Changes                                  |
+|:--------|:-----------|:----------------|:----------------------------------------------------|
+| 1.0.0   | YYYY-MM-DD | [Author Name]   | Initial draft submitted for review.                 |
+
+# Reviewer Notes
+*[This section is for internal use during the review process. Leave comments, suggestions, or approval notes here.]*
+-   **Reviewer:** [Reviewer Name]
+-   **Date:** YYYY-MM-DD
+-   **Notes:** [e.g., "Section 3 needs a clearer explanation of Concept B. The code in the lab exercise runs perfectly."]

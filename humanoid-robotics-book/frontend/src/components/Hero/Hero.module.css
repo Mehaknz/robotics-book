@@ -1,0 +1,70 @@
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: #303939; /* Dark background color */
+  color: #ffffff; /* White text for general content */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.heroContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q25,25 50,50 T100,50" fill="none" stroke="%2364ffda" stroke-width="0.5" opacity="0.1" /></svg>'); /* Reduced opacity */
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: futuristic-lines 20s linear infinite;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: none; /* Remove text shadow for cleaner look on dark bg */
+  color: #FFFFFF; /* White heading */
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  color: #FFFFFF; /* White text */
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #303939; /* Dark text on light button */
+  background-color: #64ffda; /* Soft Cyan */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+}
+
+.ctaButton:hover {
+  background-color: #ffffff; /* White */
+  transform: translateY(-3px);
+  color: #303939;
+}

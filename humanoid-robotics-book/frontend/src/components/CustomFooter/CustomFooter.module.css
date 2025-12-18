@@ -1,0 +1,75 @@
+.customFooter {
+  background-color: #303939; /* Dark background color */
+  color: #ffffff; /* White text for general content */
+  padding: 4rem 2rem 2rem;
+  font-size: 0.95rem;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusted for better distribution */
+  max-width: 1200px;
+  margin: 0 auto 3rem; /* Increased bottom margin */
+  gap: 2.5rem; /* Increased gap */
+}
+
+.footerSection {
+  flex: 1 1 200px; /* Allow sections to grow but with a min-width */
+  margin: 0 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF; /* White heading */
+  margin-bottom: 1.5rem;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksList li {
+  margin-bottom: 0.9rem; /* Increased spacing */
+}
+
+.linksList a {
+  color: #FFFFFF; /* White links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.linksList a:hover {
+  color: #64ffda; /* Soft Cyan on hover */
+  text-decoration: underline;
+}
+
+.footerBottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* White border on dark background */
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.copyright {
+  color: #FFFFFF; /* White copyright text */
+  font-size: 0.88rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem; /* Increased gap for column layout */
+  }
+
+  .footerSection {
+    margin: 0; /* Remove horizontal margin for column layout */
+  }
+}

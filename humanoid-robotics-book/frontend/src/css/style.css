@@ -1,0 +1,323 @@
+:root {
+    /* Light Theme */
+    --bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --text-color: #212529;
+    --heading-color: #000;
+    --navbar-bg-color: #ffffff;
+    --accent-color: #0d6efd;
+    --accent-color-dark: #0a58ca;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --toggle-bg: #ced4da;
+    --toggle-fg: #fff;
+    --brand-color: #000;
+}
+
+body.dark-mode {
+    /* Dark Theme */
+    --bg-color: #121212;
+    --card-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --navbar-bg-color: #1e1e1e;
+    --accent-color: #4dabf7;
+    --accent-color-dark: #3690f5;
+    --border-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --toggle-bg: var(--accent-color);
+    --toggle-fg: #121212;
+    --brand-color: #f8f9fa;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--navbar-bg-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--brand-color);
+}
+
+.navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* --- Theme Toggle Switch --- */
+.theme-switch-wrapper { display: flex; align-items: center; }
+.theme-switch { position: relative; display: inline-block; width: 48px; height: 24px; }
+.theme-switch input { display: none; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--toggle-bg); transition: .4s; border-radius: 24px; }
+.slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: var(--toggle-fg); transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--toggle-bg); }
+input:checked + .slider:before { transform: translateX(24px); }
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--card-bg-color);
+    text-align: center;
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 1rem;
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* --- General Section Styling --- */
+.section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+/* --- Chapter Slider --- */
+.slider-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.slider-button {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.slider-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+}
+
+.chapter-card-slider {
+    flex: 0 0 300px; /* Do not grow, do not shrink, base width 300px */
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chapter-card-slider:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.chapter-card-slider .chapter-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0 0 0.5rem;
+}
+
+.chapter-card-slider .chapter-content {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* --- Grid Sections (Concepts & Tools) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.concept-card, .tool-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    text-align: center;
+}
+
+.concept-card .icon, .tool-card .icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.concept-card h3, .tool-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--heading-color);
+}
+
+/* --- Navbar Search and Auth --- */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.search-input {
+    width: 0;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: width 0.4s ease-in-out, padding 0.4s ease-in-out;
+    visibility: hidden;
+}
+
+.search-input.active {
+    width: 200px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    visibility: visible;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-color);
+}
+
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--card-bg-color);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .navbar .container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .chapter-card-slider {
+        flex-basis: 250px;
+    }
+    .auth-buttons {
+        display: none; /* Hide auth buttons on smaller screens for simplicity */
+    }
+}

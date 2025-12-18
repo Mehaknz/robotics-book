@@ -1,0 +1,113 @@
+.modulesContainer {
+  padding: 4rem 2rem; /* Increased vertical padding */
+  background-color: #ffffff; /* White background */
+}
+
+.slider {
+  display: flex;
+  gap: 2rem; /* Increased gap between cards */
+  justify-content: center;
+  overflow-x: hidden; /* Hide horizontal scroll */
+  padding-bottom: 1rem;
+  margin: 0 auto; /* Center the slider itself */
+  max-width: 1200px; /* Constrain overall width */
+}
+
+.moduleCard {
+  flex: 0 0 calc(25% - 1.5rem); /* Distribute space for 4 items with gap */
+  min-width: 250px; /* Ensure a minimum width for cards */
+  max-width: 300px; /* Ensure cards don't get too big on larger screens */
+  padding: 1.8rem; /* Adjusted padding */
+  border-radius: 10px;
+  background-color: #f8f8f8; /* Slightly off-white for card background */
+  color: #303939; /* Text color */
+  box-shadow: 0 6px 18px rgba(252, 252, 252, 0.1); /* Lighter shadow on white background */
+}
+
+.moduleCard:hover {
+  transform: translateY(-7px); /* Slightly more pronounced hover esffect */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.moduleHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem; /* Adjusted margin */
+}
+
+.moduleIcon {
+  font-size: 1.8rem; /* Increased icon size */
+  margin-right: 1.2rem; /* Adjusted margin */
+  color: #211b31; /* Heading color for icons */
+}
+
+.moduleTitle {
+  font-size: 1.35rem; /* Adjusted font size */
+  font-weight: 600;
+  line-height: 1.3; /* Improved line height */
+}
+
+.moduleDescription {
+  font-size: 0.95rem; /* Adjusted font size */
+  line-height: 1.6; /* Improved line height */
+  margin-top: 1rem; /* Added margin */
+  opacity: 1; /* Full opacity on lighter background */
+  color: #303939; /* Text color */
+}
+
+.chaptersContainer {
+  margin-top: 1.8rem; /* Adjusted margin */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Subtle separator on lighter background */
+  padding-top: 1.5rem; /* Adjusted padding */
+}
+
+.chaptersTitle {
+  font-size: 1.15rem; /* Adjusted font size */
+  color: #211b31; /* Heading color */
+  margin-bottom: 1.2rem; /* Adjusted margin */
+}
+
+.chaptersList {
+  list-style: none;
+  padding: 0;
+}
+
+.chapterItem {
+  margin-bottom: 0.6rem; /* Adjusted margin */
+}
+
+.chapterItem a {
+  color: #303939; /* Text color for links */
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block; /* Make entire area clickable */
+  padding: 0.2rem 0;
+}
+
+.chapterItem a:hover {
+  color: #211b31; /* Heading color */
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .moduleCard {
+    flex: 0 0 calc(33.333% - 1.5rem); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .moduleCard {
+    flex: 0 0 calc(50% - 1.5rem); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .moduleCard {
+    flex: 0 0 90%; /* 1 card per row */
+  }
+  .slider {
+    overflow-x: auto; /* Re-enable scroll for very small screens */
+    justify-content: flex-start;
+  }
+}
