@@ -457,6 +457,8 @@
     "p-queue": "^6.6.2",
     "p-retry": "^6.2.1",
     "p-timeout": "^3.2.0",
+    "vercel-build": "docusaurus build",
+
     "package-json": "^8.1.1",
     "param-case": "^3.0.4",
     "parent-module": "^1.0.1",
