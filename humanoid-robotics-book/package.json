@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-  "dependencies": {
+ 
+  "dependencies": { 
+    
+  
+
     "accepts": "^1.3.8",
     "acorn": "^8.15.0",
     "acorn-import-phases": "^1.0.4",
@@ -720,7 +724,7 @@
     "utility-types": "^3.11.0",
     "utils-merge": "^1.0.1",
     "uuid": "^8.3.2",
-    "vercel-build": "docusaurus build",
+    
 
     "value-equal": "^1.0.1",
     "vary": "^1.1.2",
@@ -754,9 +758,13 @@
     "zwitch": "^2.0.4"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "start": "docusaurus start",
+  "build": "docusaurus build",
+  "vercel-build": "docusaurus build",
+  "serve": "docusaurus serve"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
