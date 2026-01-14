@@ -457,7 +457,6 @@
     "p-queue": "^6.6.2",
     "p-retry": "^6.2.1",
     "p-timeout": "^3.2.0",
-    "vercel-build": "docusaurus build",
 
     "package-json": "^8.1.1",
     "param-case": "^3.0.4",
@@ -721,6 +720,8 @@
     "utility-types": "^3.11.0",
     "utils-merge": "^1.0.1",
     "uuid": "^8.3.2",
+    "vercel-build": "docusaurus build",
+
     "value-equal": "^1.0.1",
     "vary": "^1.1.2",
     "vfile": "^6.0.3",
