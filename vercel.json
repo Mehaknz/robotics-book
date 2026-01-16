@@ -1,7 +1,9 @@
 {
+  "rootDirectory": "humanoid-robotics-book",
   "builds": [
     { "src": "**/*", "use": "@vercel/static" }
   ]
 }
+
 
 
